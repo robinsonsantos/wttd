@@ -14,7 +14,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'defaut': dj_database_url.config(
+    'default': dj_database_url.config(
         default='sqlite:///' + PROJECT_DIR.child('database.db'))
 }
 
@@ -30,7 +30,7 @@ TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 SITE_ID = 1
 
@@ -52,7 +52,7 @@ MEDIA_ROOT = PROJECT_DIR.child('media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
