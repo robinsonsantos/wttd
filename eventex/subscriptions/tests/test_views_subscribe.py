@@ -5,6 +5,7 @@ from eventex.subscriptions.forms import SubscriptionForm
 
 
 class SubscribeTest(TestCase):
+
     def setUp(self):
 	self.resp = self.client.get('/inscricao/')
 
