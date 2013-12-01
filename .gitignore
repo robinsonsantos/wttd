@@ -11,5 +11,6 @@ Scripts
 *~
 *.db
 *.swp
+*.tests*
 .DS_Store
 eventex/static
