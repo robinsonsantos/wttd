@@ -1,21 +1,18 @@
 # coding: utf-8
 # Django settings for eventex project.
 import os
-import dj_database_url
-from unipath import Path
-PROJECT_DIR = Path(__file__).parent
-
-# Usar o South para preparar o banco nos testes?
-# True: Sim. (default)
-# False: Não! Use o Syncdb
-SOUTH_TESTS_MIGRATE = False
-
 DEBUG = os.environ.get('DEBUG') == 'True'
+# DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+from unipath import Path
+PROJECT_DIR = Path(__file__).parent
+
+import dj_database_url
 
 MANAGERS = ADMINS
 
@@ -125,13 +122,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-	'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+	'south',
     'eventex.core',
     'eventex.subscriptions',
     'eventex.myauth',
 )
+
+# Usar o South para preparar o banco no teste ?
+SOUTH_TEST_MIGRATE = False
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -169,5 +169,10 @@ LOGGING = {
         },
     }
 }
+
+# AUTHENTICATION_BACKENDS = (
+#     'eventex.myauth.backends.EmailBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# )
 
 AUTH_USER_MODEL='myauth.User'

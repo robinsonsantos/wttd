@@ -6,8 +6,8 @@ from eventex.myauth.backends import EmailBackend
 class EmailBackendTest(TestCase):
     def setUp(self):
         UserModel = get_user_model()
-        UserModel.objects.create_user(username='robinson',
-                                      email='robinson@santos.com',
+        UserModel.objects.create_user(username='robinson', 
+                                      email='robinson@santos.com', 
                                       password='abracadabra')
         self.backend = EmailBackend()
 
